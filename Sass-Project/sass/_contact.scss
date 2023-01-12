@@ -1,0 +1,45 @@
+#contact{
+    &-a{
+        .form-fields{
+            display: grid;
+            grid-template-areas:
+               'name email'
+               'subject phone'
+               'message message'
+               'button button';
+               gap: 1rem;
+               margin-bottom: 1rem;
+               .name{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: name;
+               }
+               .email{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: email;
+               }
+               .subject{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: subject;
+               }
+               .phone{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: phone;
+               }
+               .message{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: message;
+                height:180px;
+               }
+               .btn-dark{ //Kolon ile elemanları ilişkilendiriyoruz.
+                grid-area: button;
+               }
+               .input{
+                padding: .5rem 1rem;
+               }
+        }
+    }
+
+    &-b{
+        .contact-info{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
